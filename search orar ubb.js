@@ -28,8 +28,8 @@ function sort_inputs(inputs) {
     while (!ok) {
         ok = true;
         for (var i = 0; i < inputs.length - 1; ++i) {
-            var a = window.good_types.indexOf(inputs[i][0].children[0].innerText);
-            var b = window.good_types.indexOf(inputs[i + 1][0].children[0].innerText);
+            var a = window.days.indexOf(inputs[i][0].children[0].innerText);
+            var b = window.days.indexOf(inputs[i + 1][0].children[0].innerText);
             if (a > b) {
                 var o = inputs[i];
                 inputs[i] = inputs[i + 1];
@@ -57,13 +57,13 @@ function display_inputs(inputs) {
 (function() {
     'use strict';
 
-    window.good_types = ["Luni", "Marti", "Miercuri", "Joi", "Vineri"];
+    window.days = ["Luni", "Marti", "Miercuri", "Joi", "Vineri"];
     window.allofit = $('center')[0].innerHTML;
     var input;
     var inputs;
     $('body').append('<input id="searchbar" style="position: fixed; top: 0; right: 0px;">');
     $('#searchbar').keyup(function (e) {
-        if (e.which === 13) {
+        if (e.which === 13) { // on enter key press
             input = $('#searchbar').val();
             inputs = [];
             $('#searchbar').val("");
@@ -71,7 +71,7 @@ function display_inputs(inputs) {
             sort_inputs(inputs);
             display_inputs(inputs);
         }
-        if (e.which === 27) {
+        if (e.which === 27) { // on esc key press
             $('center')[0].innerHTML = window.allofit;
         }
     });
