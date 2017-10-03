@@ -4,7 +4,7 @@
 // @version      0.2
 // @description  UBB didn't leave 90s, making their sites without a goddamn search bar
 // @author       Paul Forgaci
-// @match        http://www.cs.ubbcluj.ro/files/orar/2016-2/tabelar/I1.html
+// @match        http://www.cs.ubbcluj.ro/files/orar/*/tabelar/*.html
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.2.1.min.js
 // ==/UserScript==
