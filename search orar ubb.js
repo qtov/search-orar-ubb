@@ -65,6 +65,9 @@ function display_inputs(inputs) {
     $('center')[0].innerHTML = whole;
 }
 
+function reset_window() {
+    $('center')[0].innerHTML = window.allofit;
+}
 
 (function() {
     'use strict';
@@ -86,7 +89,11 @@ function display_inputs(inputs) {
             display_inputs(inputs);
         }
         if (e.which === 27) { // on esc key press
-            $('center')[0].innerHTML = window.allofit;
+            reset_window();
         }
+    });
+
+    $('#resetbtn').click(function() {
+        reset_window();
     });
 })();
