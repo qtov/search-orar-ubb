@@ -77,6 +77,7 @@ function reset_window() {
     var input;
     var inputs;
     $('body').append('<input id="searchbar" style="position: fixed; top: 0; right: 0px;">');
+    $('body').append('<button id="resetbtn" style="position: fixed; top: 0; left: 0px;">reset</button>');
     $('#searchbar').keyup(function (e) {
         if (e.which === 13) { // on enter key press
             input = $('#searchbar').val();
