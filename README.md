@@ -1,4 +1,4 @@
 # search-orar-ubb
 
 Tampermonkey + script = search bar for orar
-Yyay, yolo
+Yay, yolo
